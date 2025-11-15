@@ -168,7 +168,7 @@ async def process_upscale(b64_image: str, scale: int):
         logger.error(f"Upscaling error: {e}")
         raise
 
-@app.route('/upscale', methods=['POST'])
+@app.route('/upscale', methods=['POST', 'GET'])
 async def upscale_endpoint():
     """Upscale image endpoint"""
     try:
@@ -341,4 +341,4 @@ async def manual_cleanup():
 
 if __name__ == '__main__':
     logger.info("Starting Quart application...")
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    app.run(host='0.0.0.0', port=8000, debug=False, workers=4)

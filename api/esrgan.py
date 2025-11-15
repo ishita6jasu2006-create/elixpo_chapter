@@ -25,7 +25,7 @@ ModelManager.register("ipcService")
 
 # Create connections to multiple model server instances
 MODEL_SERVERS = []
-NUM_SERVERS = 5  # Total 5 instances
+NUM_SERVERS = 3  # Total 3 instances
 current_server_index = 0
 server_lock = threading.Lock()
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Starting ESRGAN model servers..."
-cd ~/upscaler.pollinations
+cd ~/upscale.pollinations
 # Function to cleanup on exit
 cleanup() {
     echo "Stopping all servers..."
